@@ -1,7 +1,7 @@
 const paths = require('./paths');
 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
+// const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
@@ -28,17 +28,17 @@ module.exports = {
 
     // Copies files from target to destination folder
     // Копирование статических файлов
-    new CopyWebpackPlugin({
-      patterns: [
-        {
-          from: paths.static,
-          to: 'assets',
-          globOptions: {
-            ignore: ['*.DS_Store'],
-          },
-        },
-      ],
-    }),
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: paths.static,
+    //       to: 'assets',
+    //       globOptions: {
+    //         ignore: ['*.DS_Store'],
+    //       },
+    //     },
+    //   ],
+    // }),
 
     // Checks formatting of js files
     // Проверка форматирования файлов стилей
@@ -55,7 +55,17 @@ module.exports = {
     // Generates an HTML file from a template
     // Создание HTML-файла на основе шаблона
     new HtmlWebpackPlugin({
-      title: 'SpaceAttack!(rs clone)',
+      title: 'Create Event',
+      favicon: paths.src + '/assets/images/favicon.svg',
+      // template file
+      // шаблон
+      template: paths.src + '/event.html',
+      filename: 'event.html', // output file
+    }),
+    // Generates an HTML file from a template
+    // Создание HTML-файла на основе шаблона
+    new HtmlWebpackPlugin({
+      title: 'Meeting Schedule Calendar',
       favicon: paths.src + '/assets/images/favicon.svg',
       // template file
       // шаблон
