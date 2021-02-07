@@ -1,4 +1,4 @@
-import AbstractView from './AbstractView';
+import AbstractView from '../AbstractView/AbstractView';
 
 class Calendar extends AbstractView {
   constructor(params) {

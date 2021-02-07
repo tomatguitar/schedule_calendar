@@ -1,5 +1,5 @@
-import Calendar from '../views/Calendar';
-import Event from '../views/Event';
+import Calendar from '../../views/Calendar/Calendar';
+import Event from '../../views/Event/Event';
 
 const router = async () => {
   const routes = [
