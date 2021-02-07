@@ -62,5 +62,9 @@
   "bugs": {
     "url": "https://github.com/tomatguitar/spaceattack_rs-clone-/issues"
   },
-  "homepage": "https://github.com/tomatguitar/spaceattack_rs-clone-#readme"
+  "homepage": "https://github.com/tomatguitar/spaceattack_rs-clone-#readme",
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "regenerator-runtime": "^0.13.7"
+  }
 }
