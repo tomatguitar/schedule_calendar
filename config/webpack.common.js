@@ -55,16 +55,6 @@ module.exports = {
     // Generates an HTML file from a template
     // Создание HTML-файла на основе шаблона
     new HtmlWebpackPlugin({
-      title: 'Create Event',
-      favicon: paths.src + '/assets/images/favicon.svg',
-      // template file
-      // шаблон
-      template: paths.src + '/event.html',
-      filename: 'event.html', // output file
-    }),
-    // Generates an HTML file from a template
-    // Создание HTML-файла на основе шаблона
-    new HtmlWebpackPlugin({
       title: 'Meeting Schedule Calendar',
       favicon: paths.src + '/assets/images/favicon.svg',
       // template file
