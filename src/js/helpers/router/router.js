@@ -1,12 +1,4 @@
-import Calendar from '../../views/Calendar/Calendar';
-import Event from '../../views/Event/Event';
-
-const router = async () => {
-  const routes = [
-    { path: '/calendar', view: Calendar },
-    { path: '/create-event', view: Event },
-  ];
-
+const router = async (routes) => {
   const pathToRegex = (path) =>
     new RegExp(`^${path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)')}$`);
 
@@ -44,9 +36,4 @@ const router = async () => {
   document.querySelector('#app').innerHTML = await view.render();
 };
 
-const navigateTo = (url) => {
-  window.history.pushState(null, null, url);
-  router();
-};
-
-export { router as default, navigateTo };
+export default router;
