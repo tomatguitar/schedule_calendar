@@ -28,7 +28,6 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.0.0",
     "eslint-webpack-plugin": "^2.4.1",
-    "express": "^4.17.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "mini-css-extract-plugin": "^1.0.0",
@@ -66,6 +65,7 @@
   "homepage": "https://github.com/tomatguitar/spaceattack_rs-clone-#readme",
   "dependencies": {
     "core-js": "^3.8.3",
+    "express": "^4.17.1",
     "regenerator-runtime": "^0.13.7"
   }
 }
