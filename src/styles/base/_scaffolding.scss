@@ -16,13 +16,11 @@ body {
 }
 
 html {
-  @include font-Arial-normal;
+  @include font-Open-Sans-regular;
 }
 
 body {
   margin: 0 auto;
-
-  background-color: black;
 }
 
 .visually-hidden:not(:focus):not(:active) {

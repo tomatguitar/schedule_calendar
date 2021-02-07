@@ -4,14 +4,20 @@
   box-sizing: $box-model;
 }
 
-@mixin font-Arial-normal {
-  font-weight: 400;
-  font-family: Arial, Helvetica, sans-serif;
+@mixin font-Open-Sans-light {
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
 }
 
-@mixin font-Arial-bold {
-  font-weight: 900;
-  font-family: Arial, Helvetica, sans-serif;
+@mixin font-Open-Sans-regular {
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
+
+@mixin font-Open-Sans-bold {
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
 }
