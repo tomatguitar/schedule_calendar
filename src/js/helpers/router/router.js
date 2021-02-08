@@ -33,7 +33,7 @@ const router = async (routes) => {
   /* eslint new-cap: ["error", { "properties": false }] */
   const view = new match.route.view(getParams(match));
 
-  document.querySelector('#app').innerHTML = await view.render();
+  await view.render();
 };
 
 export default router;

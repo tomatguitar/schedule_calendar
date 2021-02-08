@@ -1,4 +1,5 @@
 import AbstractView from '../AbstractView/AbstractView';
+import eventFormLayout from '../../pageLayouts/eventLayout';
 
 class Event extends AbstractView {
   constructor(params) {
@@ -6,13 +7,9 @@ class Event extends AbstractView {
     this.setTitle('Create Event');
   }
 
-  async render() {
-    return `
-        <h1>Event!</h1>
-        <p>
-            <a href="/calendar" data-link>Calendar</a>.
-        </p>
-    `;
+  render() {
+    const app = document.querySelector('.app');
+    app.innerHTML = eventFormLayout;
   }
 }
 

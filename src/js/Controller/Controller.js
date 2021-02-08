@@ -15,13 +15,13 @@ class Controller {
   }
 
   navigateTo(url) {
-    window.history.pushState(null, null, url);
+    window.history.pushState(url, null, url);
     router(this.view.routes);
   }
 
   init() {
     document.addEventListener('DOMContentLoaded', () => {
-      this.navigateTo('calendar');
+      // this.navigateTo('calendar');
       document.body.addEventListener('click', (e) => {
         if (e.target.matches('[data-link]')) {
           e.preventDefault();
