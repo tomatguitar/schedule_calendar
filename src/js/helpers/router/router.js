@@ -1,4 +1,11 @@
-const router = async (routes) => {
+import Calendar from '../../views/Calendar/Calendar';
+import Event from '../../views/Event/Event';
+
+const router = async () => {
+  const routes = [
+    { path: '/calendar', view: Calendar },
+    { path: '/create-event', view: Event },
+  ];
   const pathToRegex = (path) =>
     new RegExp(`^${path.replace(/\//g, '\\/').replace(/:\w+/g, '(.+)')}$`);
 
