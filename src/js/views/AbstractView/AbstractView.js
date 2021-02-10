@@ -7,7 +7,7 @@ export default class {
     document.title = title;
   }
 
-  fillOptions(elem, constant) {
+  fillSelectWithOptions(elem, constant) {
     const select = document.querySelector(`#${elem}`);
     const optionDefault = document.createElement('option');
     optionDefault.value = 'current';
@@ -22,6 +22,23 @@ export default class {
       option.value = constant[i];
       option.innerText = constant[i];
       select.append(option);
+    }
+  }
+
+  fillSelectWithCheckboxes(elem, constant) {
+    const checkboxContainer = document.querySelector(`.${elem}`);
+
+    for (let i = 1; i < constant.length; i++) {
+      const label = document.createElement('label');
+      const input = document.createElement('input');
+      label.classList.add('checkbox-label');
+      label.htmlFor = `option${i}`;
+      label.innerText = constant[i];
+      input.type = 'checkbox';
+      input.name = `option${i}`;
+      input.value = constant[i];
+      checkboxContainer.appendChild(label);
+      label.insertAdjacentElement('afterbegin', input);
     }
   }
 
