@@ -1,0 +1,42 @@
+.filter--multiselect {
+  width: 25rem;
+}
+
+.select-box {
+  position: relative;
+}
+
+.select-box select {
+  width: 100%;
+
+  font-weight: bold;
+}
+
+.over-select {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.checkboxes {
+  position: absolute;
+  z-index: 10;
+
+  display: none;
+  width: 100%;
+
+  background: $solid-white;
+
+  border: 2px solid $light-blue;
+  border-radius: 0.5rem;
+}
+
+.checkboxes label {
+  display: block;
+}
+
+.checkboxes label:hover {
+  background-color: #1e90ff;
+}
