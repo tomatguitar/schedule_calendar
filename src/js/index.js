@@ -2,11 +2,9 @@
 /* eslint-disable no-alert */
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
-import controller from './Controller/Controller';
-import App from './App/App';
 
 // Import of styles
 import '../styles/index.scss';
+import app from './App/App';
 
-// eslint-disable-next-line no-unused-vars
-const app = new App(controller);
+app.init();
