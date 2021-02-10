@@ -1,0 +1,7 @@
+.title {
+  font-size: 3rem;
+  line-height: 3rem;
+  text-align: center;
+  text-transform: uppercase;
+  @include font-Open-Sans-bold;
+}
