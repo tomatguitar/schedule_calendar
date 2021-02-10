@@ -1,4 +1,4 @@
-const DAYS = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+const DAYS = ['Name', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
 const TIME = [
   '10:00',
   '11:00',

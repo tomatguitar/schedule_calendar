@@ -4,6 +4,8 @@
   color: black;
   @include font-Open-Sans-bold;
   &__title {
+    margin-bottom: 1rem;
+
     font-size: 3rem;
     line-height: 3rem;
   }
