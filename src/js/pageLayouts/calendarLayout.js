@@ -1,18 +1,25 @@
 const calendarHeader = `
-<header>
-      <label for="filter">
-        <select name="filter" id="filter">
-          <option value=""></option>
-          <option value="">Maria</option>
-          <option value="">Oleg</option>
-          <option value="">Ivan</option>
-          <option value="">Kate</option>
-          <option value="">Andrey</option>
-          <option value="">Dmitry</option>
-        </select>
-      </label>
-      <a class="list__link" href="/create-event" data-link>New event +</a>
-    </header>
+<header class="header">
+<label for="select">Filter events by participant's name:</label>
+<div class="filter">
+    <select name="filter" class="select">
+      <option value=""></option>
+      <option value="Maria">Maria</option>
+      <option value="Oleg">Oleg</option>
+      <option value="Ivan">Ivan</option>
+      <option value="Kate">Kate</option>
+      <option value="Andrey">Andrey</option>
+      <option value="Dmitry">Dmitry</option>
+    </select>
+    <div class="select-icon">
+    <svg focusable="false" viewBox="0 0 104 128" width="25" height="35" class="icon">
+      <path d="m2e1 95a9 9 0 0 1 -9 9 9 9 0 0 1 -9 -9 9 9 0 0 1 9 -9 9 9 0 0 1 9 9zm0-3e1a9 9 0 0 1 -9 9 9 9 0 0 1 -9 -9 9 9 0 0 1 9 -9 9 9 0 0 1 9 9zm0-3e1a9 9 0 0 1 -9 9 9 9 0 0 1 -9 -9 9 9 0 0 1 9 -9 9 9 0 0 1 9 9zm14 55h68v1e1h-68zm0-3e1h68v1e1h-68zm0-3e1h68v1e1h-68z"></path>
+    </svg>
+  </div>
+  </div>
+
+  <a class="button" href="/create-event" data-link>New event +</a>
+</header>
 `;
 
 const tableLayout = `
