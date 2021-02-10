@@ -13,11 +13,11 @@ export default class {
     optionDefault.value = 'current';
     optionDefault.innerText = '';
     select.appendChild(optionDefault);
-
-    for (let i = 0; i < constant.length; i++) {
-      if (elem === 'day') {
-        i += 1;
-      }
+    let i = 0;
+    if (elem === 'day') {
+      i = 1;
+    }
+    for (i; i < constant.length; i++) {
       const option = document.createElement('option');
       option.value = constant[i];
       option.innerText = constant[i];

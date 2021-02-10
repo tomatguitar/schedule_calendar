@@ -45,6 +45,7 @@ class Calendar extends AbstractView {
     const app = document.querySelector('.app');
     app.innerHTML = layout.calendarHeader + layout.tableLayout;
     this.fillCalendarHeaders();
+    this.fillOptions('filter-participants', CONSTANTS.PARTICIPANTS);
     // return `
     //     <h1>EVENT CALENDAR</h1>
     //     <p>
