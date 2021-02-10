@@ -1,29 +1,3 @@
-/* <option value="current"></option>
-          <option value="Maria">Maria</option>
-          <option value="Oleg">Oleg</option>
-          <option value="Ivan">Ivan</option>
-          <option value="Kate">Kate</option>
-          <option value="Andrey">Andrey</option>
-          <option value="Dmitry">Dmitry</option> */
-
-/* <option value="current"></option>
-          <option value="Monday">Monday</option>
-          <option value="Tuesday">Tuesday</option>
-          <option value="Wednesday">Wednesday</option>
-          <option value="Thursday">Thursday</option>
-          <option value="Friday">Friday</option> */
-
-/* <option value="0"></option>
-          <option value="10:00">10:00</option>
-          <option value="11:00">11:00</option>
-          <option value="12:00">12:00</option>
-          <option value="13:00">13:00</option>
-          <option value="14:00">14:00</option>
-          <option value="15:00">15:00</option>
-          <option value="16:00">16:00</option>
-          <option value="17:00">17:00</option>
-          <option value="18:00">18:00</option> */
-
 const eventFormLayout = `
 <a href="/calendar" data-link>Calendar</a>
 <h2 class="title">Create New Event</h2>
@@ -69,8 +43,8 @@ const eventFormLayout = `
         </div>
       </div>
       <div class="button-wrapper">
-        <button class="button" data-key='cancel'>Cancel</button>
-        <button class="button" data-key='create'>Create</button>
+        <a href="/calendar" class="button" data-key='cancel' data-link>Cancel</a>
+        <a href="/calendar" class="button" data-key='create' data-link>Create</a>
       </div>
     </form>`;
 

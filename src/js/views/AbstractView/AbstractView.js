@@ -37,6 +37,7 @@ export default class {
       input.type = 'checkbox';
       input.name = `option${i}`;
       input.value = constant[i];
+      input.setAttribute('data-key', 'participant');
       checkboxContainer.appendChild(label);
       label.insertAdjacentElement('afterbegin', input);
     }

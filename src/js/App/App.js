@@ -1,18 +1,13 @@
-import router from '../helpers/router/router';
+import router, { navigateTo } from '../helpers/router/router';
 
 class App {
-  navigateTo(url) {
-    window.history.pushState(url, null, url);
-    router();
-  }
-
   init() {
     document.addEventListener('DOMContentLoaded', () => {
       // this.navigateTo('calendar');
       document.body.addEventListener('click', (e) => {
         if (e.target.matches('[data-link]')) {
           e.preventDefault();
-          this.navigateTo(e.target.href);
+          navigateTo(e.target.href);
         }
       });
 

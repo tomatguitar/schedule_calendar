@@ -43,4 +43,9 @@ const router = async () => {
   await view.render();
 };
 
-export default router;
+const navigateTo = (url) => {
+  window.history.pushState(url, null, url);
+  router();
+};
+
+export { router as default, navigateTo };
