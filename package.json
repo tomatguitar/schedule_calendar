@@ -1,5 +1,5 @@
 {
-  "name": "spaceattack-rs-clone-",
+  "name": "schedule-calendar",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -55,14 +55,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tomatguitar/spaceattack_rs-clone-.git"
+    "url": "git+https://github.com/tomatguitar/schedule_calendar.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tomatguitar/spaceattack_rs-clone-/issues"
+    "url": "https://github.com/tomatguitar/schedule_calendar/issues"
   },
-  "homepage": "https://github.com/tomatguitar/spaceattack_rs-clone-#readme",
+  "homepage": "https://github.com/tomatguitar/schedule_calendar#readme",
   "dependencies": {
     "core-js": "^3.8.3",
     "express": "^4.17.1",
