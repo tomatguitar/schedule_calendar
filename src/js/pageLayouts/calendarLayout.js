@@ -16,87 +16,87 @@ const calendarHeader = `
 `;
 
 const tableLayout = `
-<table>
-      <caption>
+<table class="calendar">
+      <caption class="calendar__title">
         CALENDAR
       </caption>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Mon</th>
-          <th>Tue</th>
-          <th>Wed</th>
-          <th>Thu</th>
-          <th>Fri</th>
+      <thead class="calendar__head">
+        <tr class="calendar__row">
+          <th class="calendar__heading">Name</th>
+          <th class="calendar__heading">Mon</th>
+          <th class="calendar__heading">Tue</th>
+          <th class="calendar__heading">Wed</th>
+          <th class="calendar__heading">Thu</th>
+          <th class="calendar__heading">Fri</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <th>10:00</th>
+      <tbody class="calendar__body">
+        <tr class="calendar__row">
+          <th class="calendar__heading">10:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>11:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">11:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>12:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">12:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>13:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">13:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>14:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">14:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>15:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">15:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>16:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">16:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>17:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">17:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
           <td>---</td>
         </tr>
-        <tr>
-          <th>18:00</th>
+        <tr class="calendar__row">
+          <th class="calendar__heading">18:00</th>
           <td>---</td>
           <td>---</td>
           <td>---</td>
