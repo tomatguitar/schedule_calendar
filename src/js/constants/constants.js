@@ -12,4 +12,9 @@ const TIME = [
 ];
 const PARTICIPANTS = ['Maria', 'Oleg', 'Ivan', 'Kate', 'Andrey', 'Dmitry'];
 
-export { DAYS, TIME, PARTICIPANTS };
+const ERROR = {
+  slotIsBooked: 'Failed to create event. Time slot is already booked',
+  fieldIsEmpty: 'Failed to create event. One of the fields is not filled',
+};
+
+export { DAYS, TIME, PARTICIPANTS, ERROR };
