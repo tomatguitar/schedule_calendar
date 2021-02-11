@@ -1,7 +1,7 @@
 const eventFormLayout = `
 <a href="/calendar" data-link>Calendar</a>
 <h2 class="title">Create New Event</h2>
-<form  class="event">
+<form  class="event" onSubmit="return false">
       <label class="event-label" for="event-name">Name of event: </label>
       <div class="input">
         <input type="text" name="event-name" id="event-name"/>
@@ -24,7 +24,7 @@ const eventFormLayout = `
       </div>
       <label class="event-label" for="day">Day: </label>
       <div class="filter">
-        <select class="select" name="day"  id="day">
+        <select class="select" name="day"  id="day" data-key ="day">
         </select>
         <div class="select-icon">
           <svg focusable="false" viewBox="0 0 104 128" width="25" height="35" class="icon">
@@ -34,7 +34,7 @@ const eventFormLayout = `
       </div>
       <label class="event-label" for="time">Time: </label>
       <div class="filter">
-        <select class="select" name="time"  id="time">
+        <select class="select" name="time"  id="time" data-key ="time">
         </select>
         <div  class="select-icon">
           <svg focusable="false" viewBox="0 0 104 128" width="25" height="35" class="icon">

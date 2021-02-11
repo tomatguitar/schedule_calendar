@@ -10,7 +10,7 @@ export default class {
   fillSelectWithOptions(elem, constant) {
     const select = document.querySelector(`#${elem}`);
     const optionDefault = document.createElement('option');
-    optionDefault.value = 'current';
+    optionDefault.value = 'empty';
     optionDefault.innerText = '';
     select.appendChild(optionDefault);
     let i = 0;
