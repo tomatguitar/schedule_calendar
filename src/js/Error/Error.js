@@ -1,6 +1,6 @@
 class Error {
   constructor() {
-    this.page = document.querySelector('.app');
+    this.page = document.querySelector('body');
   }
 
   create(message) {
