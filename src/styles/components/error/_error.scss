@@ -3,6 +3,8 @@
   top: 0;
   left: 0;
 
+  display: none;
+
   width: 100%;
   padding: 0.5rem 0;
 
@@ -11,5 +13,32 @@
   text-align: center;
 
   background: red;
+  visibility: hidden;
+  opacity: 0.1;
+
+  animation: 2s linear 0s normal 1 showError;
+  animation-play-state: paused;
   @include font-Open-Sans-light;
+}
+
+@keyframes showError {
+  0% {
+    visibility: visible;
+    opacity: 0.1;
+  }
+
+  25% {
+    visibility: visible;
+    opacity: 0.5;
+  }
+
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
 }
