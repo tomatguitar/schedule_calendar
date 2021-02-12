@@ -10,7 +10,6 @@ const calendarHeader = `
       </svg>
     </div>
   </div>
-
   <a class="button" href="/create-event" data-key="new-event" data-link>New event +</a>
 </header>
 `;

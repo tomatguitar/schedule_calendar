@@ -13,15 +13,19 @@ class Model {
     };
     this.checkIsOk = false;
     this.errorMessage = '';
+    this.currentEventStamp = ''; // string "dayIndex:timeIndex"
+    this.filteredByParticipant = [];
+    this.updateArrayOfParticipants();
   }
 
-  resetEventValue() {
+  resetEventValues() {
     this.event = {
       name: '',
       participants: [],
       day: '',
       time: '',
     };
+    this.checkIsOk = false;
   }
 
   setEventNameValue(target) {
@@ -75,6 +79,33 @@ class Model {
     }
   }
 
+  // filter existing events by participant
+  filterByParticipant(target) {
+    const option = target.options[target.selectedIndex].value;
+    const filtered = state.events.filter((o) => {
+      const obj = o;
+      return obj.participants.includes(option);
+    });
+    this.filteredByParticipant = filtered;
+  }
+
+  // this method is needed to make an array of participants that
+  // will take part in created events and insert this array as a
+  // list of options in the select field on the calendar page
+  updateArrayOfParticipants() {
+    const arr = [];
+    if (state.events.length === 0) {
+      return;
+    }
+    state.events.forEach((o) => {
+      const obj = o;
+      arr.push(obj.participants);
+    });
+    state.participants = [...new Set(arr.flat())].sort();
+    // eslint-disable-next-line no-console
+    console.log(state.participants);
+  }
+
   checkEvent() {
     // if one of fields is not filled
     if (!this.check.fieldIsFilled(this.event)) {
@@ -84,13 +115,35 @@ class Model {
       this.errorMessage = CONSTANTS.ERROR.slotIsBooked;
     } else {
       this.checkIsOk = true;
-      // else add event object to state
     }
   }
 
   addEvent() {
+    // add event to state
     state.events.push(this.event);
-    this.resetEventValue();
+    this.updateArrayOfParticipants();
+  }
+
+  getEventDate(e) {
+    // get data-stamp attribute from current td element
+    // tranform it to array [dayIndex, timeIndex]
+    this.currentEventStamp = e.path[2].getAttribute('data-stamp');
+  }
+
+  removeEvent(dateStamp) {
+    const dayIndex = dateStamp.charAt(0);
+    const timeIndex = dateStamp.charAt(2);
+    const day = CONSTANTS.DAYS[dayIndex];
+    const time = CONSTANTS.TIME[timeIndex];
+    const currentEvent = state.events.find((o) => {
+      const obj = o;
+      return obj.day === day && obj.time === time;
+    });
+    const eventList = state.events.filter((o) => {
+      const obj = o;
+      return obj !== currentEvent;
+    });
+    state.events = eventList;
   }
 }
 

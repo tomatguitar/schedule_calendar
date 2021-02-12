@@ -1,7 +1,10 @@
 .calendar {
   width: 100%;
+  height: 1px;
 
   color: black;
+
+  table-layout: fixed;
   @include font-Open-Sans-bold;
   &__title {
     margin-bottom: 1rem;
@@ -22,11 +25,15 @@
   }
   th,
   td {
+    height: 100%;
+
     border-color: white;
     border-style: solid;
     border-width: 0 1px 1px 0;
   }
   td {
+    overflow: hidden;
+
     text-align: center;
 
     background: $dusty-blue;

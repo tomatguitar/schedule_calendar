@@ -14,10 +14,33 @@ class Controller {
     ];
   }
 
+  onEventFilter(target) {
+    this.model.filterByParticipant(target);
+    this.calendar.hideEventElements(this.model.filteredByParticipant);
+  }
+
+  onRemoveEventCancel() {
+    this.calendar.hideModalBox();
+  }
+
+  onRemoveEventApprove() {
+    this.model.removeEvent(this.model.currentEventStamp);
+    this.calendar.removeEventElement(this.model.currentEventStamp);
+    this.calendar.hideModalBox();
+  }
+
+  onRemoveEvent(e) {
+    this.model.getEventDate(e);
+    // grab innerText of div.eventSpan element
+    this.calendar.showModalBox(e.path[1].innerText);
+  }
+
   onLinkButtonClick(e) {
-    this.model.resetEventValue();
+    this.model.resetEventValues();
     e.preventDefault();
     this.navigateTo(e);
+    // eslint-disable-next-line no-console
+    console.log(this.model.event);
   }
 
   onCreateEvent(e) {
@@ -27,8 +50,7 @@ class Controller {
       this.event.showError(this.model.errorMessage);
     } else {
       this.model.addEvent();
-      e.preventDefault();
-      this.navigateTo(e);
+      this.onLinkButtonClick(e);
     }
   }
 
@@ -50,6 +72,10 @@ class Controller {
     const { target } = e;
     const idAttr = target.getAttribute('id');
     switch (idAttr) {
+      case 'filter-participants':
+        this.onEventFilter(target);
+        break;
+
       case 'day':
         this.onDateNameChange(target, 'day');
         break;
@@ -95,6 +121,18 @@ class Controller {
         this.onLinkButtonClick(e);
         break;
 
+      case 'delete':
+        this.onRemoveEvent(e);
+        break;
+
+      case 'approve':
+        this.onRemoveEventApprove(e);
+        break;
+
+      case 'not-approve':
+        this.onRemoveEventCancel(e);
+        break;
+
       default:
         e.preventDefault();
         break;
@@ -123,6 +161,7 @@ class Controller {
 
       router(this.routes);
       window.addEventListener('popstate', () => router(this.routes));
+      this.model.updateArrayOfParticipants();
     });
   }
 }

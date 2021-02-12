@@ -10,8 +10,17 @@ export default class {
   fillSelectWithOptions(elem, constant) {
     const select = document.querySelector(`#${elem}`);
     const optionDefault = document.createElement('option');
-    optionDefault.value = 'empty';
-    optionDefault.innerText = '';
+    if (elem === 'filter-participants') {
+      if (constant.length === 0) {
+        optionDefault.innerText = 'No members';
+      } else {
+        optionDefault.value = 'empty';
+        optionDefault.innerText = 'All members';
+      }
+    } else {
+      optionDefault.value = 'empty';
+      optionDefault.innerText = '';
+    }
     select.appendChild(optionDefault);
     let i = 0;
     if (elem === 'day') {
@@ -27,7 +36,6 @@ export default class {
 
   fillSelectWithCheckboxes(elem, constant) {
     const checkboxContainer = document.querySelector(`.${elem}`);
-
     for (let i = 1; i < constant.length; i++) {
       const label = document.createElement('label');
       const input = document.createElement('input');
