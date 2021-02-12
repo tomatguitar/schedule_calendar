@@ -46,6 +46,8 @@ class Calendar extends AbstractView {
     app.innerHTML = layout.calendarHeader + layout.tableLayout;
     this.fillCalendarHeaders();
     this.fillSelectWithOptions('filter-participants', CONSTANTS.PARTICIPANTS);
+
+    // addListenters
   }
 }
 

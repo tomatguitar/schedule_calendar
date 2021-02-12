@@ -11,7 +11,7 @@ const calendarHeader = `
     </div>
   </div>
 
-  <a class="button" href="/create-event" data-link>New event +</a>
+  <a class="button" href="/create-event" data-key="new-event" data-link>New event +</a>
 </header>
 `;
 
