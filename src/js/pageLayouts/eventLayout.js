@@ -1,5 +1,4 @@
 const eventFormLayout = `
-<a href="/calendar" data-link>Calendar</a>
 <h2 class="title">Create New Event</h2>
 <form  class="event" onSubmit="return false">
       <label class="event-label" for="event-name">Name of event: </label>
