@@ -16,8 +16,9 @@ Main screen contains filter, "Create event+" button and calendar table. Second s
 ## DEPLOY
 
 The app has been deployed both to gh-pages and Heroku.  
-[GH-PAGES](https://tomatguitar.github.io/schedule_calendar/dist/)
-[HEROKU](https://schedule-calendar-app.herokuapp.com/calendar)
+**[GH-PAGES](https://tomatguitar.github.io/schedule_calendar/dist/)**
+
+**[HEROKU](https://schedule-calendar-app.herokuapp.com/calendar)**
 
 **If you want to run app locally on your machine, please, follow next steps:**
 
