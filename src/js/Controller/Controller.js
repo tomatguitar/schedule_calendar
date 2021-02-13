@@ -2,6 +2,7 @@ import router from '../helpers/router/router';
 import Calendar from '../views/Calendar/Calendar';
 import Event from '../views/Event/Event';
 import Model from '../Model/Model';
+import state from '../state/state';
 
 class Controller {
   constructor() {
@@ -26,6 +27,11 @@ class Controller {
   onRemoveEventApprove() {
     this.model.removeEvent(this.model.currentEventStamp);
     this.calendar.removeEventElement(this.model.currentEventStamp);
+    this.model.updateArrayOfParticipants();
+    this.calendar.fillSelectWithOptions(
+      'filter-participants',
+      state.participants
+    );
     this.calendar.hideModalBox();
   }
 

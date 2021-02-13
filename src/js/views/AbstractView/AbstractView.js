@@ -9,6 +9,7 @@ export default class {
 
   fillSelectWithOptions(elem, constant) {
     const select = document.querySelector(`#${elem}`);
+    select.innerHTML = '';
     const optionDefault = document.createElement('option');
     if (elem === 'filter-participants') {
       if (constant.length === 0) {

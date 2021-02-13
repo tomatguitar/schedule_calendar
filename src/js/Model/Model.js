@@ -109,6 +109,7 @@ class Model {
   updateArrayOfParticipants() {
     const arr = [];
     if (state.events.length === 0) {
+      state.participants = [];
       return;
     }
     state.events.forEach((o) => {
@@ -161,8 +162,7 @@ class Model {
     });
     state.events = eventList;
     // save list of events when event is removed
-    this.model.save('events', state.events);
-    this.model.updateArrayOfParticipants();
+    this.save('events', state.events);
   }
 }
 
