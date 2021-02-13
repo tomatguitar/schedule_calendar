@@ -89,17 +89,29 @@ class Calendar extends AbstractView {
     });
   }
 
+  // creates popup element that shows full name of event
+  createPopUpElement(eventName) {
+    const textDiv = document.createElement('div');
+    const textSpan = document.createElement('div');
+    textDiv.classList.add('popup');
+    textSpan.classList.add('popup__text');
+    textSpan.innerText = eventName;
+    textDiv.appendChild(textSpan);
+    return textDiv;
+  }
+
   createEventElement(eventName) {
-    let eventTitle = eventName;
+    let slicedTitle = eventName;
     if (eventName.length >= 18) {
-      eventTitle = `${eventName.slice(0, 18)}...`;
+      slicedTitle = `${eventName.slice(0, 17)}...`;
     }
     const evDiv = document.createElement('div');
     const closeBtn = document.createElement('span');
+
     closeBtn.classList.add('delete-btn');
     closeBtn.setAttribute('data-key', 'delete');
     evDiv.classList.add('eventSpan');
-    evDiv.innerText = `${eventTitle}`;
+    evDiv.innerText = `${slicedTitle}`;
     evDiv.appendChild(closeBtn);
     return evDiv;
   }
@@ -123,12 +135,14 @@ class Calendar extends AbstractView {
   }
 
   appendEventDiv(dayIndex, timeIndex, eventName) {
+    const popup = this.createPopUpElement(eventName);
     const eventDiv = this.createEventElement(eventName);
     const tBody = document.querySelector('.calendar__body');
     const timeRow = tBody.querySelectorAll('tr')[timeIndex];
     const cell = timeRow.querySelectorAll('td')[dayIndex - 1];
     cell.setAttribute('data-stamp', `${dayIndex}:${timeIndex}`);
     cell.insertAdjacentElement('afterbegin', eventDiv);
+    cell.insertAdjacentElement('afterbegin', popup);
   }
 
   createOverlay() {

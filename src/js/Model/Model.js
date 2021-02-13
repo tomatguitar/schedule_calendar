@@ -161,7 +161,8 @@ class Model {
     });
     state.events = eventList;
     // save list of events when event is removed
-    this.save('events', state.events);
+    this.model.save('events', state.events);
+    this.model.updateArrayOfParticipants();
   }
 }
 
