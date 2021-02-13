@@ -1,0 +1,23 @@
+label {
+  margin-right: 1rem;
+
+  font-size: 2rem;
+  line-height: 2rem;
+  @include font-Open-Sans-bold;
+}
+
+.event-label {
+  margin-right: 0;
+
+  line-height: 5rem;
+}
+
+.checkbox-label {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  @include font-Open-Sans-regular;
+}

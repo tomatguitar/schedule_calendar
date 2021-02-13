@@ -1,0 +1,42 @@
+*,
+*:after,
+*:before {
+  @include box-sizing(border-box);
+}
+
+html {
+  font-size: $base-font-size;
+  line-height: $base-font-size;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  @include font-Open-Sans-regular;
+}
+
+body {
+  margin: 0 auto;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+
+  clip-path: inset(100%);
+}

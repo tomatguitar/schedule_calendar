@@ -1,0 +1,23 @@
+@mixin box-sizing($box-model) {
+  -webkit-box-sizing: $box-model;
+  -moz-box-sizing: $box-model;
+  box-sizing: $box-model;
+}
+
+@mixin font-Open-Sans-light {
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
+
+@mixin font-Open-Sans-regular {
+  font-weight: 400;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
+
+@mixin font-Open-Sans-bold {
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+}
