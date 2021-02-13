@@ -1,6 +1,7 @@
 import Check from '../Check/Check';
 import * as CONSTANTS from '../constants/constants';
 import state from '../state/state';
+import * as storage from '../helpers/storage/storage';
 
 class Model {
   constructor() {
@@ -15,7 +16,20 @@ class Model {
     this.errorMessage = '';
     this.currentEventStamp = ''; // string "dayIndex:timeIndex"
     this.filteredByParticipant = [];
+    this.loadEventsfromStorage('events');
     this.updateArrayOfParticipants();
+  }
+
+  save(name, val) {
+    storage.set(name, val);
+  }
+
+  load(name) {
+    return storage.get(name);
+  }
+
+  loadEventsfromStorage(name) {
+    state.events = this.load(name) ? this.load(name) : [];
   }
 
   resetEventValues() {
@@ -121,6 +135,8 @@ class Model {
   addEvent() {
     // add event to state
     state.events.push(this.event);
+    // save list of events when new event is created
+    this.save('events', state.events);
     this.updateArrayOfParticipants();
   }
 
@@ -144,6 +160,8 @@ class Model {
       return obj !== currentEvent;
     });
     state.events = eventList;
+    // save list of events when event is removed
+    this.save('events', state.events);
   }
 }
 
